@@ -26,5 +26,12 @@ public class MainController implements Initializable {
                 Utils.changeScene(actionEvent, "signUp.fxml", "Sign Up");
             }
         });
+
+        logInButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Utils.changeScene(actionEvent, "menu.fxml", "Menu");
+            }
+        });
     }
 }
