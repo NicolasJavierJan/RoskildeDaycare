@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Utils {
     // For all the Useful Methods we will use.
@@ -77,6 +78,33 @@ public class Utils {
         } finally {
             closeConnection();
         }
+    }
+
+    // For Populating the List in ChildrenList
+    public static ArrayList<String> childrenList(){
+
+        ArrayList<String> children = new ArrayList<>();
+
+        try {
+            connection();
+            preparedStatement = connect.prepareStatement("SELECT first_name, last_name FROM children");
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                String retrievedFirstName = resultSet.getString("first_name");
+                String retrievedLastName = resultSet.getString("last_name");
+                String fullName = retrievedLastName + ", " + retrievedFirstName;
+
+                children.add(fullName);
+                }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+
+        return children;
+
     }
 
     // For testing if the Connection worked!
