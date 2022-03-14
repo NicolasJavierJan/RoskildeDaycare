@@ -17,6 +17,7 @@ public class Main extends Application {
         stage.setTitle("Log In");
         stage.setScene(scene);
         stage.show();
+        Utils.connect();
     }
 
     public static void main(String[] args) {
