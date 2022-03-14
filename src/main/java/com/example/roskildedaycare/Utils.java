@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
@@ -17,6 +18,10 @@ public class Utils {
     private static String url = "jdbc:mysql://localhost:3306/daycare";
     private static String user = "root";
     private static String password = "";
+
+    // Attributes to use the DB
+    private static PreparedStatement preparedStatement = null;
+    private static ResultSet resultSet = null;
 
     // Change of Scene:
     public static void changeScene(ActionEvent event, String fxmlFile, String title){
@@ -44,8 +49,49 @@ public class Utils {
         }
     }
 
+    // For Logging In the User
+    public static void loginUser(ActionEvent event, String username, String password){
+        try {
+            connection();
+            preparedStatement = connect.prepareStatement("SELECT password FROM users WHERE username = ?");
+            preparedStatement.setString(1, username);
+            resultSet = preparedStatement.executeQuery();
+
+            if (!resultSet.isBeforeFirst()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "User not found");
+                alert.show();
+            } else {
+                while (resultSet.next()){
+                    String retrievedPassword = resultSet.getString("password");
+
+                    if (retrievedPassword.equals(password)){
+                        changeScene(event, "menu.fxml", "Menu");
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR, "Passwords don't match");
+                        alert.show();
+                    }
+                }
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+    }
+
     // For testing if the Connection worked!
     public static void connect(){
         connection();
+    }
+
+    // Closing of connections:
+    public static void closeConnection(){
+        if (connect != null){
+            try {
+                connect.close();
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
     }
 }
