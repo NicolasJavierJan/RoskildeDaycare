@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.ChildInformationController">
+   <children>
+      <Label fx:id="childNameLabel" layoutX="45.0" layoutY="45.0" prefHeight="66.0" prefWidth="510.0" text="Child Name">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="childBirthLabel" layoutX="45.0" layoutY="128.0" prefHeight="32.0" prefWidth="194.0" text="Birth Date: " />
+      <Label fx:id="extraInfoLabel" alignment="TOP_LEFT" layoutX="45.0" layoutY="176.0" prefHeight="138.0" prefWidth="194.0" text="Extra Info: " wrapText="true" />
+      <Label fx:id="parentNameLabel" layoutX="325.0" layoutY="128.0" prefHeight="32.0" prefWidth="194.0" text="Parent Name:" />
+      <Label fx:id="parentPhoneLabel" alignment="TOP_LEFT" layoutX="325.0" layoutY="176.0" prefHeight="54.0" prefWidth="194.0" text="Parent Phone Number:" />
+      <Button fx:id="goBackButton" layoutX="325.0" layoutY="314.0" mnemonicParsing="false" text="Go Back" />
+      <Label fx:id="parentEmailLabel" alignment="TOP_LEFT" layoutX="325.0" layoutY="245.0" prefHeight="54.0" prefWidth="194.0" text="Parent Email:" />
+   </children>
+</AnchorPane>

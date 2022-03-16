@@ -122,4 +122,68 @@ public class Utils {
             }
         }
     }
+
+    public static void seeInformation(ActionEvent event, String fxmlFile, String title, String childName){
+        Parent root = null;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Utils.class.getResource(fxmlFile));
+            root = loader.load();
+            ChildInformationController childInformationController = loader.getController();
+
+
+            // Separates the childName String;
+            String[] split = childName.split(", ");
+            String childLast = split[0];
+            String childFirst = split[1];
+            // Variables that are going to be passed for the child information screen
+            String parentID = null;
+            String extra = null;
+            String childBirth = null;
+            String parentFirst = null;
+            String parentLast = null;
+            String parentPhone = null;
+            String parentMail = null;
+
+            // Connecting to database and getting results
+            try {
+                // Connecting to Database to fetch information
+                connection();
+                // Getting information from children:
+                preparedStatement = connect.prepareStatement("SELECT * FROM children WHERE first_name = ? and last_name = ?");
+                preparedStatement.setString(1, childFirst);
+                preparedStatement.setString(2, childLast);
+                resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()){
+                    parentID = resultSet.getString("parent_id");
+                    childBirth = resultSet.getString("birth_date");
+                    extra = resultSet.getString("extra_info");
+                }
+                // Getting information from parents based on Parent ID
+                preparedStatement = connect.prepareStatement("SELECT * FROM parents WHERE id = ?");
+                preparedStatement.setString(1, parentID);
+                resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()){
+                    parentFirst = resultSet.getString("first_name");
+                    parentLast = resultSet.getString("last_name");
+                    parentPhone = resultSet.getString("phone_number");
+                    parentMail = resultSet.getString("e_mail");
+                }
+                String parentFullName = parentLast + ", " + parentFirst;
+
+                // Sending all the information to the controller.
+                childInformationController.setChildInformation(childName, childBirth, extra, parentFullName, parentPhone, parentMail);
+
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root, 600, 400));
+        stage.show();
+    }
 }
