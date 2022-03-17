@@ -14,6 +14,7 @@ public class MenuController implements Initializable{
     // todo: implements all the other buttons
     @FXML Button childListsButton;
     @FXML Button addChildButton;
+    @FXML Button logOutButton;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
         childListsButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -30,6 +31,13 @@ public class MenuController implements Initializable{
             }
         });
 
-    };
+        logOutButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Utils.changeScene(actionEvent, "main.fxml", "Login");
+            }
+        });
+
+    }
 
 }

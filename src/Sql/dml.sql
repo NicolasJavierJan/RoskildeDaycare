@@ -13,7 +13,7 @@
 -- INSERT INTO daycare.children(first_name, last_name, birth_date, extra_info, parent_id) VALUES ("Martin", "Student", "2017-12-17", "no cigarettes ", 2);
 -- INSERT INTO daycare.children(first_name, last_name, birth_date, extra_info, parent_id) VALUES ("Nayeem", "Student", "2018-07-25", " ", 2);
 -- INSERT INTO daycare.children(first_name, last_name, birth_date, extra_info, parent_id) VALUES ("Christian", "Teacher", "2020-05-09", "no strawberries ", 1);
--- INSERT INTO daycare.children(first_name, last_name, birth_date, extra_info, parent_id) VALUES ("Nika", "Student", "2019-04-21", " Allergic to peanuts ", 2);
+-- INSERT INTO daycare.children(first_name, last_name, birth_date, extra_info, parent_id) VALUES ("Nika", "Student", "2019-04-21", "Allergic to peanuts ", 2);
 
 -- INSERT INTO daycare.children_list(child_id) VALUES (1);
 -- INSERT INTO daycare.children_list(child_id) VALUES (2);
