@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.ChildrenListsController">
    <children>
-      <Label layoutX="94.0" layoutY="73.0" prefHeight="41.0" prefWidth="101.0" text="Registered:">
+      <Label layoutX="94.0" layoutY="73.0" prefHeight="41.0" prefWidth="101.0" text="Registered">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -19,6 +19,6 @@
       <Button fx:id="goBackButton" layoutX="270.0" layoutY="354.0" mnemonicParsing="false" text="Go back" />
       <ListView fx:id="childListView" layoutX="45.0" layoutY="114.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="waitingChildrenListView" layoutX="353.0" layoutY="114.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="clickedLastButton" layoutX="261.0" layoutY="158.0" mnemonicParsing="false" text="Clicked Last" />
+      <Button fx:id="seeInformationButton" layoutX="248.0" layoutY="157.0" mnemonicParsing="false" text="See Information" />
    </children>
 </AnchorPane>
