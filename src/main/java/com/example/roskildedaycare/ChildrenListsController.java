@@ -28,11 +28,12 @@ public class ChildrenListsController implements Initializable {
 
     @FXML Button goBackButton;
     @FXML
-    private Button clickedLastButton;
+    private Button seeInformationButton;
     private String clickedLast;
 
 
     public void initialize(URL url, ResourceBundle resourceBundle){
+        seeInformationButton.setDisable(true);
 
         goBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -63,6 +64,7 @@ public class ChildrenListsController implements Initializable {
         childListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                seeInformationButton.setDisable(false);
                 clickedLast = childListView.getSelectionModel().getSelectedItem();
             }
         });
@@ -71,15 +73,16 @@ public class ChildrenListsController implements Initializable {
         waitingChildrenListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                seeInformationButton.setDisable(false);
                 clickedLast =  waitingChildrenListView.getSelectionModel().getSelectedItem();
             }
         });
 
         // This method WILL open a new window with information about the last clicked children.
-        clickedLastButton.setOnAction(new EventHandler<ActionEvent>() {
+        seeInformationButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Last Clicked: " + clickedLast);
+                Utils.seeInformation(actionEvent, "childInformation.fxml", "Child Information", clickedLast);
             }
         });
 
