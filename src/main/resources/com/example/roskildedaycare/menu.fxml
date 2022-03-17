@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.MenuController">
+<AnchorPane prefHeight="320.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.MenuController">
    <children>
-      <Button fx:id="childListsButton" layoutX="48.0" layoutY="218.0" mnemonicParsing="false" text="Child Information" />
-      <Button layoutX="48.0" layoutY="256.0" mnemonicParsing="false" text="Working Schedule" />
-      <Button fx:id="addChildButton" layoutX="48.0" layoutY="143.0" mnemonicParsing="false" text="Add Child" />
-      <Button layoutX="48.0" layoutY="182.0" mnemonicParsing="false" text="Children overview" />
-      <Label layoutX="55.0" layoutY="66.0" text="Hi &lt;userName&gt;">
+      <Button fx:id="childListsButton" accessibleHelp="Display children lists and inforamtion" layoutX="26.0" layoutY="181.0" mnemonicParsing="false" text="Child Information">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="26.0" layoutY="218.0" mnemonicParsing="false" text="Working Schedule" />
+      <Button fx:id="addChildButton" accessibleHelp="Add a new child and a new parent in the system" layoutX="26.0" layoutY="144.0" mnemonicParsing="false" text="Add new child">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="usernameLabel" layoutX="25.0" layoutY="102.0" prefHeight="23.0" prefWidth="341.0" text="Hi &lt;userName&gt;">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="logOutButton" layoutX="515.0" layoutY="352.0" mnemonicParsing="false" text="Log out" />
+      <Button fx:id="logOutButton" layoutX="383.0" layoutY="283.0" mnemonicParsing="false" text="Log out" />
+      <Label layoutX="158.0" layoutY="6.0" text="Menu">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

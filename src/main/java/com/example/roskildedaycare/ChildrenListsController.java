@@ -38,7 +38,7 @@ public class ChildrenListsController implements Initializable {
         goBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Utils.changeScene(actionEvent, "menu.fxml", "Menu");
+                Utils.changeScene(actionEvent, "menu.fxml", "Menu",450,320);
             }
         });
 

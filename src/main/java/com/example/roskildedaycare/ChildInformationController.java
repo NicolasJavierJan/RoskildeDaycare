@@ -31,18 +31,18 @@ public class ChildInformationController implements Initializable {
         goBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Utils.changeScene(actionEvent, "childrenLists.fxml", "Lists");
+                Utils.changeScene(actionEvent, "childrenLists.fxml", "Lists", 600,450);
             }
         });
     }
 
     public void setChildInformation(String childName, String childBirth, String extraInfo, String parentName, String parentPhone, String parentMail){
         childNameLabel.setText(childName);
-        childBirthLabel.setText("Birth Date: " + childBirth);
-        extraInfoLabel.setText("Extra information: " + extraInfo);
-        parentNameLabel.setText("Parent: " + parentName);
-        parentPhoneLabel.setText("Parent's Phone Number: " + parentPhone);
-        parentEmailLabel.setText("Parent's E-Mail: " + parentMail);
+        childBirthLabel.setText("Birth Date: \n" + childBirth);
+        extraInfoLabel.setText("Extra information: \n" + extraInfo);
+        parentNameLabel.setText("Parent: \n" + parentName);
+        parentPhoneLabel.setText("Parent's Phone Number: \n" + parentPhone);
+        parentEmailLabel.setText("Parent's E-Mail: \n" + parentMail);
 
     }
 }

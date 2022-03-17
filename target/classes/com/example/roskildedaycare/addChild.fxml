@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="522.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.AddChildController">
+<AnchorPane prefHeight="523.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.AddChildController">
    <children>
       <Label layoutX="17.0" layoutY="19.0" text="Add Child">
          <font>
@@ -18,22 +18,22 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="17.0" layoutY="157.0" text="First name" />
-      <Label layoutX="190.0" layoutY="157.0" text="Last name" />
-      <Label layoutX="366.0" layoutY="156.0" text="Phone number" />
-      <Label layoutX="21.0" layoutY="334.0" text="First name" />
-      <Label layoutX="194.0" layoutY="334.0" text="Last name" />
-      <Label layoutX="22.0" layoutY="400.0" text="Relevant info" />
-      <TextField fx:id="parentFirstNameField" layoutX="17.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" />
-      <TextField fx:id="parentLastNameField" layoutX="190.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" />
-      <TextField fx:id="parentPhoneNumberField" layoutX="366.0" layoutY="180.0" prefHeight="26.0" prefWidth="141.0" />
-      <TextField fx:id="childFirstNameField" layoutX="21.0" layoutY="359.0" prefHeight="26.0" prefWidth="141.0" />
-      <TextField fx:id="childLastNameField" layoutX="194.0" layoutY="359.0" prefHeight="26.0" prefWidth="141.0" />
-      <TextField fx:id="childRelevantInfoField" layoutX="21.0" layoutY="427.0" prefHeight="26.0" prefWidth="491.0" />
-      <Button fx:id="confirmButton" layoutX="290.0" layoutY="477.0" mnemonicParsing="false" text="Confirm" />
-      <Button fx:id="goBackButton" layoutX="555.0" layoutY="19.0" mnemonicParsing="false" text="Go back" />
-      <Label layoutX="17.0" layoutY="221.0" text="E-mail" />
-      <TextField fx:id="parentEmailField" layoutX="17.0" layoutY="246.0" prefHeight="26.0" prefWidth="141.0" />
+      <Label layoutX="23.0" layoutY="157.0" text="First name" />
+      <Label layoutX="196.0" layoutY="157.0" text="Last name" />
+      <Label layoutX="372.0" layoutY="156.0" text="Phone number" />
+      <Label layoutX="23.0" layoutY="335.0" text="First name" />
+      <Label layoutX="196.0" layoutY="335.0" text="Last name" />
+      <Label layoutX="26.0" layoutY="394.0" text="Relevant info" />
+      <TextField fx:id="parentFirstNameField" layoutX="23.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" />
+      <TextField fx:id="parentLastNameField" layoutX="196.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" />
+      <TextField fx:id="parentPhoneNumberField" layoutX="372.0" layoutY="180.0" prefHeight="26.0" prefWidth="141.0" />
+      <TextField fx:id="childFirstNameField" layoutX="23.0" layoutY="360.0" prefHeight="26.0" prefWidth="141.0" />
+      <TextField fx:id="childLastNameField" layoutX="196.0" layoutY="360.0" prefHeight="26.0" prefWidth="141.0" />
+      <TextField fx:id="childRelevantInfoField" layoutX="23.0" layoutY="428.0" prefHeight="26.0" prefWidth="491.0" />
+      <Button fx:id="confirmButton" layoutX="240.0" layoutY="483.0" mnemonicParsing="false" text="Confirm" />
+      <Button fx:id="goBackButton" layoutX="457.0" layoutY="29.0" mnemonicParsing="false" text="Go back" />
+      <Label layoutX="23.0" layoutY="221.0" text="E-mail" />
+      <TextField fx:id="parentEmailField" layoutX="23.0" layoutY="246.0" prefHeight="26.0" prefWidth="141.0" />
       <Label layoutX="18.0" layoutY="123.0" text="• Parent information:">
          <font>
             <Font size="16.0" />
@@ -44,7 +44,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="334.0" text="Birth date (YYYY-MM-DD)" />
-      <TextField fx:id="childBirthDateField" layoutX="370.0" layoutY="360.0" prefHeight="26.0" prefWidth="141.0" />
+      <Label layoutX="372.0" layoutY="335.0" text="Birth date (YYYY-MM-DD)" />
+      <TextField fx:id="childBirthDateField" layoutX="372.0" layoutY="361.0" prefHeight="26.0" prefWidth="141.0" />
    </children>
 </AnchorPane>

@@ -32,7 +32,7 @@ public class MainController implements Initializable {
         signUpButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Utils.changeScene(actionEvent, "signUp.fxml", "Sign Up");
+                Utils.changeScene(actionEvent, "signUp.fxml", "Sign Up", 457,360);
             }
         });
 
@@ -51,7 +51,7 @@ public class MainController implements Initializable {
         buttonForEntering.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Utils.changeScene(actionEvent, "menu.fxml", "Menu");
+                Utils.changeScene(actionEvent, "menu.fxml", "Menu", 420, 300);
             }
         });
     }

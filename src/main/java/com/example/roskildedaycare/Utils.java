@@ -34,7 +34,7 @@ public class Utils {
     private static ResultSet resultSet1 = null;
 
     // Change of Scene:
-    public static void changeScene(ActionEvent event, String fxmlFile, String title){
+    public static void changeScene(ActionEvent event, String fxmlFile, String title, double width, double height){
         Parent root = null;
 
         try {
@@ -45,7 +45,8 @@ public class Utils {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root, width, height));
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -75,7 +76,7 @@ public class Utils {
                     String retrievedPassword = resultSet.getString("password");
 
                     if (retrievedPassword.equals(password)){
-                        changeScene(event, "menu.fxml", "Menu");
+                        Utils.changeScene(event, "menu.fxml", "Menu", 450, 320);
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR, "Passwords don't match");
                         alert.show();
@@ -87,6 +88,7 @@ public class Utils {
         } finally {
             closeConnection();
         }
+
     }
 
     // Method to sign up a new user: check if the username already taken, and if the password and confirm password match
@@ -116,7 +118,7 @@ public class Utils {
                 psInsert.setString(2, password);
                 psInsert.executeUpdate();
 
-                changeScene(event, "menu.fxml", "Menu");
+                Utils.changeScene(event, "main.fxml", "Log In",457,360);
             }
         } catch (SQLException e) {
             e.printStackTrace();
