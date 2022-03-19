@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -18,10 +19,16 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="goBackButton" layoutX="266.0" layoutY="412.0" mnemonicParsing="false" text="Go back" />
+      <Button fx:id="goBackButton" layoutX="269.0" layoutY="410.0" mnemonicParsing="false" text="Go back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <ListView fx:id="childListView" layoutX="19.0" layoutY="181.0" prefHeight="200.0" prefWidth="200.0" />
       <ListView fx:id="waitingChildrenListView" layoutX="382.0" layoutY="176.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="seeInformationButton" layoutX="249.0" layoutY="266.0" mnemonicParsing="false" text="See Information" />
+      <Button fx:id="seeInformationButton" layoutX="249.0" layoutY="266.0" mnemonicParsing="false" text="See Information">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label layoutX="14.0" layoutY="24.0" text="Children list">
          <font>
             <Font name="System Bold" size="48.0" />

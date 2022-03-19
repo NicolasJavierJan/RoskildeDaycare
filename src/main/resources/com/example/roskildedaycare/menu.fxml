@@ -12,7 +12,6 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="26.0" layoutY="218.0" mnemonicParsing="false" text="Working Schedule" />
       <Button fx:id="addChildButton" accessibleHelp="Add a new child and a new parent in the system" layoutX="26.0" layoutY="144.0" mnemonicParsing="false" text="Add new child">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -22,8 +21,11 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="logOutButton" layoutX="383.0" layoutY="283.0" mnemonicParsing="false" text="Log out" />
-      <Label layoutX="158.0" layoutY="6.0" text="Menu">
+      <Button fx:id="logOutButton" layoutX="383.0" layoutY="283.0" mnemonicParsing="false" text="Log out">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="153.0" layoutY="6.0" text="Menu">
          <font>
             <Font size="60.0" />
          </font>

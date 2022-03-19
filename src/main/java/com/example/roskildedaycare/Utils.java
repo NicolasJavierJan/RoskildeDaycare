@@ -74,9 +74,9 @@ public class Utils {
             } else {
                 while (resultSet.next()){
                     String retrievedPassword = resultSet.getString("password");
-
                     if (retrievedPassword.equals(password)){
-                        Utils.changeScene(event, "menu.fxml", "Menu", 450, 320);
+                        //Utils.changeScene(event, "menu.fxml", "Menu", 450, 320);
+                        logIn(event,"menu.fxml", "Menu",username);
                     } else {
                         Alert alert = new Alert(Alert.AlertType.ERROR, "Passwords don't match");
                         alert.show();
@@ -104,7 +104,8 @@ public class Utils {
                 System.out.println("The two password don't match, try again");
                 Alert alert = new Alert(Alert.AlertType.ERROR, "The two passwords don't match, try again");
                 alert.show();
-            } else if (resultSet.isBeforeFirst()) {
+            }
+            else if (resultSet.isBeforeFirst()) {
 
                 System.out.println("Username already taken, try again");
                 Alert alert = new Alert(Alert.AlertType.ERROR, "User with those credential already exists, try again with a different username ");
@@ -117,8 +118,11 @@ public class Utils {
                 psInsert.setString(1, username);
                 psInsert.setString(2, password);
                 psInsert.executeUpdate();
-
                 Utils.changeScene(event, "main.fxml", "Log In",457,360);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "User created successfully, Log in to access the app");
+                alert.show();
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -313,7 +317,74 @@ public class Utils {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle(title);
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root, 516, 360));
         stage.show();
     }
+
+    public static void logIn(ActionEvent event, String fxmlFile, String title, String username){
+        Parent root = null;
+
+        try{
+            FXMLLoader loader = new FXMLLoader(Utils.class.getResource(fxmlFile));
+            root = loader.load();
+            MenuController menuController = loader.getController();
+
+            try{
+                connection();
+                preparedStatement = connect.prepareStatement("SELECT * FROM users WHERE username = ?");
+                preparedStatement.setString(1,username);
+                resultSet=preparedStatement.executeQuery();
+
+                if(resultSet.next()){
+                    username = resultSet.getString("username");
+                }
+                menuController.setUsernameLabel(username);
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root, 450,320));
+        stage.setResizable(false);
+        stage.show();
+    }
+    /*public static void logIn(ActionEvent event, String fxmlFile, String title, String username) {
+
+        Parent root = null;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Utils.class.getResource(fxmlFile));
+            root = loader.load();
+            MenuController menuController = loader.getController();
+
+            try {
+                connection();
+                preparedStatement = connect.prepareStatement("SELECT * FROM users WHERE username = ?");
+                preparedStatement.setString(1, username);
+                resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()) {
+                    username = resultSet.getString("username");
+                }
+                menuController.setUsernameLabel(username);
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene(new Scene(root, 450,320));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+     */
 }
+

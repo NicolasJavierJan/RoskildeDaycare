@@ -48,11 +48,13 @@ public class MainController implements Initializable {
         });
 
         // Method for the button for skipping the Log In.
+        /*
         buttonForEntering.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 Utils.changeScene(actionEvent, "menu.fxml", "Menu", 420, 300);
             }
         });
+         */
     }
 }

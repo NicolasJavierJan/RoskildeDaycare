@@ -43,8 +43,6 @@ public class SignUpController implements Initializable {
             public void handle(ActionEvent actionEvent) {
                 if (!usernameTextField.getText().trim().isEmpty() && !passwordField.getText().trim().isEmpty()){
                     Utils.signUp(actionEvent, usernameTextField.getText(), passwordField.getText(), confirmPasswordField.getText());
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION, "User created successfully, Log in to access the app");
-                    alert.show();
                 }
                 else {
                     System.out.println("Please fill all the info");

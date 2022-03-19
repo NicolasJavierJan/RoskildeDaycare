@@ -17,11 +17,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MenuController implements Initializable{
-    // todo: implements all the other buttons
     @FXML Button childListsButton;
     @FXML Button addChildButton;
     @FXML Button logOutButton;
-    @FXML static Label usernameLabel;
+    @FXML Label usernameLabel;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
 
@@ -46,6 +45,10 @@ public class MenuController implements Initializable{
             }
         });
 
+    }
+
+    public void setUsernameLabel(String username){
+       usernameLabel.setText("Hi " + username);
     }
 
 }

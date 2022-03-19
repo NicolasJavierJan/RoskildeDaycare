@@ -10,7 +10,10 @@
 
 <AnchorPane fx:id="signUpAnchorPane" prefHeight="360.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.SignUpController">
    <children>
-      <Button fx:id="createUserButton" layoutX="141.0" layoutY="309.0" mnemonicParsing="false" text="Create user" />
+      <Button fx:id="createUserButton" layoutX="141.0" layoutY="309.0" mnemonicParsing="false" text="Create user">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label alignment="CENTER" layoutX="117.0" layoutY="8.0" text="Sign up! ">
          <font>
             <Font name="System Bold" size="60.0" />
