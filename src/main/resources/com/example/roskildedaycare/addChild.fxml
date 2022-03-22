@@ -22,20 +22,20 @@
       <Label layoutX="23.0" layoutY="157.0" text="First name" />
       <Label layoutX="196.0" layoutY="157.0" text="Last name" />
       <Label layoutX="372.0" layoutY="156.0" text="Phone number" />
-      <Label layoutX="23.0" layoutY="335.0" text="First name" />
-      <Label layoutX="196.0" layoutY="335.0" text="Last name" />
-      <Label layoutX="26.0" layoutY="394.0" text="Relevant info" />
+      <Label layoutX="24.0" layoutY="335.0" text="First name" />
+      <Label layoutX="197.0" layoutY="335.0" text="Last name" />
+      <Label layoutX="26.0" layoutY="405.0" text="Relevant info" />
       <TextField fx:id="parentFirstNameField" layoutX="23.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. Andrea" />
       <TextField fx:id="parentLastNameField" layoutX="196.0" layoutY="181.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. Di Claudio" />
       <TextField fx:id="parentPhoneNumberField" layoutX="372.0" layoutY="180.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. 28769466" />
       <TextField fx:id="childFirstNameField" layoutX="23.0" layoutY="360.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. Nicolas" />
       <TextField fx:id="childLastNameField" layoutX="196.0" layoutY="360.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. Javier Jan" />
       <TextField fx:id="childRelevantInfoField" layoutX="23.0" layoutY="428.0" prefHeight="26.0" prefWidth="491.0" promptText="E.g. Allergic to strawberries" />
-      <Button fx:id="confirmButton" layoutX="240.0" layoutY="483.0" mnemonicParsing="false" text="Confirm">
+      <Button fx:id="confirmButton" layoutX="350.0" layoutY="480.0" mnemonicParsing="false" text="Confirm">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="goBackButton" layoutX="457.0" layoutY="29.0" mnemonicParsing="false" text="Go back">
+      <Button fx:id="goBackButton" layoutX="126.0" layoutY="480.0" mnemonicParsing="false" text="Go back">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -51,7 +51,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="372.0" layoutY="335.0" text="Birth date (YYYY-MM-DD)" />
+      <Label layoutX="373.0" layoutY="335.0" text="Birth date (YYYY-MM-DD)" />
       <TextField fx:id="childBirthDateField" layoutX="372.0" layoutY="361.0" prefHeight="26.0" prefWidth="141.0" promptText="E.g. 2020-01-01" />
    </children>
 </AnchorPane>

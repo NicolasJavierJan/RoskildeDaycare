@@ -19,14 +19,14 @@ public class ChildrenListsController implements Initializable {
 
     // List views and observableArrayLists
     @FXML
-    ListView<String> childListView;
-    ObservableList<String> childItems = FXCollections.observableArrayList();
+    private ListView<String> childListView;
+    private ObservableList<String> childItems = FXCollections.observableArrayList();
 
     @FXML
-    ListView<String> waitingChildrenListView;
-    ObservableList<String> waitingChildrenItems = FXCollections.observableArrayList();
+    private ListView<String> waitingChildrenListView;
+    private ObservableList<String> waitingChildrenItems = FXCollections.observableArrayList();
 
-    @FXML Button goBackButton;
+    @FXML private Button goBackButton;
     @FXML
     private Button seeInformationButton;
     private String clickedLast;

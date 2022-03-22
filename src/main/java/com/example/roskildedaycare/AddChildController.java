@@ -18,16 +18,16 @@ import java.util.ResourceBundle;
 
 public class AddChildController implements Initializable {
 
-    @FXML Button goBackButton;
-    @FXML Button confirmButton;
-    @FXML TextField parentFirstNameField;
-    @FXML TextField parentLastNameField;
-    @FXML TextField parentPhoneNumberField;
-    @FXML TextField parentEmailField;
-    @FXML TextField childFirstNameField;
-    @FXML TextField childLastNameField;
-    @FXML TextField childBirthDateField;
-    @FXML TextField childRelevantInfoField;
+    @FXML private Button goBackButton;
+    @FXML private Button confirmButton;
+    @FXML private TextField parentFirstNameField;
+    @FXML private TextField parentLastNameField;
+    @FXML private TextField parentPhoneNumberField;
+    @FXML private TextField parentEmailField;
+    @FXML private TextField childFirstNameField;
+    @FXML private TextField childLastNameField;
+    @FXML private TextField childBirthDateField;
+    @FXML private TextField childRelevantInfoField;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
         goBackButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -40,7 +40,6 @@ public class AddChildController implements Initializable {
         confirmButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-
 
                 if (!parentFirstNameField.getText().trim().isEmpty() && !parentLastNameField.getText().trim().isEmpty()
                         && !parentPhoneNumberField.getText().trim().isEmpty() && !parentEmailField.getText().trim().isEmpty()

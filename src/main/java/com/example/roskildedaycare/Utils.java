@@ -236,6 +236,8 @@ public class Utils {
             }
         } catch (SQLException e){
         e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Something went wrong, try again");
+            alert.show();
     } finally {
         closeConnection();
     }

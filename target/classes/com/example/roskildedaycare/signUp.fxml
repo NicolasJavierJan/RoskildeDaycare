@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="signUpAnchorPane" prefHeight="360.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roskildedaycare.SignUpController">
    <children>
-      <Button fx:id="createUserButton" layoutX="141.0" layoutY="309.0" mnemonicParsing="false" text="Create user">
+      <Button fx:id="createUserButton" layoutX="230.0" layoutY="309.0" mnemonicParsing="false" text="Create user">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -37,7 +37,7 @@
       <PasswordField fx:id="passwordField" layoutX="196.0" layoutY="197.0" promptText="E.g. Password!23x345" />
       <PasswordField fx:id="confirmPasswordField" layoutX="196.0" layoutY="247.0" promptText="E.g. Password!23x345" />
       <TextField fx:id="usernameTextField" layoutX="197.0" layoutY="147.0" promptText="E.g. andreaDiclaudio12" />
-      <Button fx:id="goBackButton" layoutX="243.0" layoutY="309.0" mnemonicParsing="false" text="Go back">
+      <Button fx:id="goBackButton" layoutX="148.0" layoutY="309.0" mnemonicParsing="false" text="Go back">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>

@@ -17,10 +17,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MenuController implements Initializable{
-    @FXML Button childListsButton;
-    @FXML Button addChildButton;
-    @FXML Button logOutButton;
-    @FXML Label usernameLabel;
+    @FXML private Button childListsButton;
+    @FXML private Button addChildButton;
+    @FXML private Button logOutButton;
+    @FXML private Label usernameLabel;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
 
